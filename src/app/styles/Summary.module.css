@@ -1,0 +1,107 @@
+.cart__summary {
+    display: flex;
+    position: sticky;
+    top: 11rem;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 2rem;
+    /* background-color: #d9d9d9; */
+    align-self: flex-start;
+    gap: 3rem;
+}
+
+.cart__summary__section{
+    border-bottom: 1px solid #000;
+    padding-bottom: 1rem;
+}
+.cart__summary__section:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.cart__summary__section__input {
+    width: 100%;
+    height: 2.5rem;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.cart_summary_section__radio {
+    margin-right: 1rem;
+}
+
+.cart__btn {
+    background-color: #000;
+    width: 100%;
+    height: 5rem;
+    border-radius: 2.5rem;
+    margin-top: auto;
+    color: #fff;
+    border: none;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+.cart__btn:hover {
+    opacity: 0.8;
+}
+
+.cart__btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.cart__modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index: -10;
+    transition: opacity 0.2s ease-in-out;
+}
+
+
+.cart__modal__active {
+    opacity: 1;
+    z-index: 100;
+    height: 100vh;
+}
+
+.cart__modal__content {
+    width: 30rem;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5rem;
+    border-radius: 2.5rem;
+    gap: 2rem;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+.cart__modal__content__active {
+    transform: scale(1);
+}
+.cart__modal__btn {
+    background-color: #000;
+    width: 100%;
+    height: 5rem;
+    border-radius: 2.5rem;
+    margin-top: auto;
+    color: #fff;
+    border: none;
+    transition: opacity 0.2s ease-in-out;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5); 
+}
+
+.cart__modal__image {
+    align-self: center;
+}
