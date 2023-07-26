@@ -1,0 +1,9 @@
+.about__container {
+    width: 130rem;
+    margin: 3rem auto;
+    max-width: 90%;
+}
+
+.about__title {
+    text-align: center;
+}

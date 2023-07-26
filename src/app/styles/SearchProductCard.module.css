@@ -1,0 +1,46 @@
+.products__container{
+    width: 130rem;
+    margin: 3rem auto;
+    max-width: 90%;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+
+.product__card {
+    display: flex;
+    align-items: center;
+}
+
+.product__title {
+    color: #000;
+    font-size: 2.4rem;
+    font-weight: 700;
+}
+
+.product__price {
+    color: #000;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+
+
+@media (max-width: 768px) {
+    .product__image {
+        width: 10rem;
+        height: 10rem;
+        margin-right: 2rem;
+    }
+
+    .product__title {
+        font-size: 2rem;
+    }
+    .product__description {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
+    }
+}
+

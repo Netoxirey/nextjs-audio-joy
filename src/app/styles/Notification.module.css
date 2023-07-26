@@ -1,0 +1,63 @@
+.notification__container{
+    position: fixed;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    background-color: #d9d9d9;
+    top: 10rem;
+    left: 10;
+    transform: translateX(-200%);
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    z-index: 1000;
+   cursor: pointer;
+}
+
+.notification__show {
+    opacity: 1;
+    transform: translateX(0);
+   
+}
+
+.notification__message {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+
+.notification__progress_bar {
+    width: 100%;
+    height: 4px;
+    background-color: #000; 
+    border-radius: 0.5rem;
+    animation: progress-bar-shrink 3s linear forwards;
+  }
+
+  .notification__close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+  }
+
+  
+  @keyframes progress-bar-shrink {
+    0% {
+      width: 100%;
+    }
+    100% {
+      width: 0;
+    }
+  }
+
+  @media (max-width: 564px) {
+    .notification__container {
+      width: 90%;
+      left: 0;
+      top: 10rem;
+    }
+  }
+

@@ -1,0 +1,8 @@
+.products__container {
+    width: 130rem;
+    max-width: 90%;
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}

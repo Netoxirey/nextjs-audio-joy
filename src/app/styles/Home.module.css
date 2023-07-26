@@ -1,0 +1,10 @@
+
+.products__grid {
+    width: 130rem;
+    max-width: 90%;
+    gap: 2rem;
+    margin: 3rem auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
