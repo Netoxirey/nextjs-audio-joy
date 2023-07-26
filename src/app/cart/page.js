@@ -5,10 +5,6 @@ import Image from 'next/image';
 import Link from 'next/link';
 import styles from '../styles/Cart.module.css';
 
-export const metadata = {
-  title: 'Cart',
-  description: 'Cart page',
-};
 
 function Cart() {
   const { cart, removeFromCart, setQuantity, updateQuantity, setCart } = useContext(StoreContext);
