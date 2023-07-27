@@ -1,5 +1,4 @@
 
-
 function SearchPage() {
   return (
     <h1 style={{textAlign: "center"}}>

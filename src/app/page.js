@@ -1,4 +1,3 @@
-
 import Hero from './components/Hero'
 import { createClient,  } from 'next-sanity'
 import styles from './styles/Home.module.css'

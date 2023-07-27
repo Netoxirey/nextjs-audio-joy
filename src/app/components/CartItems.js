@@ -22,7 +22,7 @@ function CartItems() {
       <div key={item._id} className={styles.cart__item}>
         <Image src={item.image} alt={item.name} width={300} height={300} className={styles.cart__image} />
         <h3>{item.name}</h3>
-        <p>price: <span>${item.price}</span></p>
+        <p>price: <span>${item.price} x {item.quantity}</span></p>
         <select className={styles.cart__item__select} defaultValue={item.quantity} onChange={(e) => handleChange(e, item)}>
           <option value="1">1</option>
           <option value="2">2</option>
