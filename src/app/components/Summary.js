@@ -31,12 +31,12 @@ function Summary() {
     country: 'Germany',
   });
   const [billing, setBilling] = useState({
-    person: '',
-    address: '',
-    city: '',
-    state: '',
-    zip: '',
-    country: '',
+    person: 'Anna McLoan',
+    address: 'Rosenstrasse 2043',
+    city: 'Munich',
+    state: 'Baviera',
+    zip: '81604',
+    country: 'Germany',
   });
   const total = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
 
@@ -77,16 +77,6 @@ function Summary() {
     }
   };
 
-  const handleCloseAddress = (title) => {
-    setForm('');
-    if (title === 'Delivery') {
-      setAddress({ ...address });
-    } else {
-      setBilling({ ...billing });
-    }
-    setFormAddressError(false);
-  };
-
   const handleRadioChange = (e) => {
     setShipping(+e.target.value);
   };
@@ -102,8 +92,8 @@ function Summary() {
       setError(false);
       return;
     }
-    if (DiscountCode[e.target.value]) {
-      setDiscount(Math.round(total * DiscountCode[e.target.value]));
+    if (DiscountCode[e.target.value.toLowerCase()]) {
+      setDiscount(Math.round(total * DiscountCode[e.target.value.toLowerCase()]));
       setError(false);
       return;
     }
@@ -124,7 +114,6 @@ function Summary() {
             setForm={setForm}
             formAddressError={formAddressError}
             handleSubmitAddress={(e) => handleSubmitAddress(e, 'Delivery')}
-            handleCloseAddress={() => handleCloseAddress('Delivery')}
           />
         </div>
         {/* Billing Address */}
@@ -137,10 +126,9 @@ function Summary() {
             setForm={setForm}
             formAddressError={formAddressError}
             handleSubmitAddress={(e) => handleSubmitAddress(e, 'Billing')}
-            handleCloseAddress={() => handleCloseAddress('Billing')}
           />
           <div className={styles.cart__summary__checkbox}>
-            <input type="checkbox" name="billing" id="billing" onChange={() => setBilling(address)} ref={checkoutRef} />
+            <input type="checkbox" name="billing" id="billing" onChange={() => setBilling(address)} ref={checkoutRef} defaultChecked/>
             <label htmlFor="billing">Same as delivery address</label>
           </div>
         </div>

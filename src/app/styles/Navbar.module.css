@@ -90,7 +90,6 @@
     z-index: 10;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 
 .nav__search__form__mobile__show {

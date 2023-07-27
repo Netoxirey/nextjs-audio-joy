@@ -33,7 +33,6 @@ function Address({ title, data, setData, form, setForm, formAddressError, handle
             <input type="text" name="country" id="country" value={country} onChange={(e) => setData({ ...data, country: e.target.value })} />
             <button className={styles.cart__modal__btn}>Save</button>
             {formAddressError && <p className={styles.cart__summary__section__error}>Please fill all the fields</p>}
-            <Image src="/cross-logo.svg" alt="close" width={30} height={30} className={styles.cart__modal__cross} onClick={handleCloseAddress} />
           </form>
         </div>
       </>
