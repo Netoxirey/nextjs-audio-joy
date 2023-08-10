@@ -24,7 +24,7 @@ function NavBar() {
     router.push(`/search/${search}`);
     setSearch('');
   };
-
+  console.log(inputRef)
   const handleSearch = () => {
     setShowSearch(true);
     inputRef.current.focus();
@@ -51,7 +51,7 @@ function NavBar() {
             value={search}
           />
           <button className={styles.nav__search__input__button}>
-            <Image width={40} height={40} src="/search-logo.svg" alt="search icon" />
+            <Image width={30} height={30} src="/search-logo.svg" alt="search icon" />
           </button>
         </form>
 
